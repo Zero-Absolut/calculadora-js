@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora Simples</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <div id="calculadora">
+        <input type="text" id="display" value="0" readonly>
+        <div class="linha-botoes">
+            <button  onclick="limpaCampo()">C</button>
+            <button  onclick="capturaValor('/')">/</button>
+            <button  onclick="capturaValor('x')">*</button>
+            <button  onclick="capturaValor('-')">-</button>
+        </div>
+        <div class="linha-botoes">
+            <button  onclick="capturaValor('7')">7</button>
+            <button  onclick="capturaValor('8')">8</button>
+            <button  onclick="capturaValor('9')">9</button>
+            <button  onclick="capturaValor('+')">+</button>
+        </div>
+        <div class="linha-botoes">
+            <button  onclick="capturaValor('4')">4</button>
+            <button  onclick="capturaValor('5')">5</button>
+            <button  onclick="capturaValor('6')">6</button>
+        </div>
+        <div class="linha-botoes">
+            <button  onclick="capturaValor('1')">1</button>
+            <button  onclick="capturaValor('2')">2</button>
+            <button  onclick="capturaValor('3')">3</button>
+            <button  id="calcular">=</button>
+        </div>
+        <div class="linha-botoes">
+            <button  onclick="capturaValor('0')">0</button>
+            <button  onclick="capturaValor('.')">.</button>
+        </div>
+    </div>
+
+    <p id="teste"></p>
+    <script src="index.js"></script> </body>
+</html>

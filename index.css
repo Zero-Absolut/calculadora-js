@@ -1,0 +1,86 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #f0f0f0;
+    margin: 0;
+}
+
+#calculadora {
+    width: 320px;
+    border: 1px solid #ccc;
+    border-radius: 12px;
+    overflow: hidden;
+    background-color: #282a36;
+    box-shadow: 8px 8px 16px rgba(0, 0, 0, 0.4);
+}
+
+#display {
+    width: calc(100% - 20px);
+    padding: 20px 10px;
+    font-size: 40px;
+    text-align: right;
+    border: none;
+    background-color: #44475a;
+    color: #f8f8f2;
+    box-sizing: border-box;
+}
+
+.linha-botoes {
+    display: flex;
+    justify-content: space-around; /* Distribui o espaço igualmente entre os botões */
+    align-items: center; /* Alinha os itens verticalmente ao centro (se necessário) */
+}
+
+.linha-botoes button {
+    flex: 1; /* Faz os botões ocuparem o mesmo espaço dentro da linha */
+    padding: 22px;
+    font-size: 22px;
+    border: none;
+    background-color: #44475a;
+    color: #f8f8f2;
+    cursor: pointer;
+    transition: background-color 0.2s ease-in-out, transform 0.1s ease-in-out;
+    margin: 2px; /* Adiciona uma pequena margem entre os botões */
+    border-radius: 6px; /* Adiciona um pequeno arredondamento aos botões */
+}
+
+.linha-botoes button:hover {
+    background-color: #6272a4;
+}
+
+.linha-botoes button:active {
+    background-color: #3b4252;
+    transform: scale(0.95);
+}
+
+/* Estilos específicos para botões de operação e controle */
+#calculadora .linha-botoes:first-child button {
+    background-color: #6272a4;
+    color: #f8f8f2;
+}
+
+#calculadora .linha-botoes:first-child button:hover {
+    background-color: #8be9fd;
+    color: #282a36;
+}
+
+/* Estilo para o botão de igual para ocupar mais espaço */
+#calculadora .linha-botoes:nth-child(4) button:last-child {
+    flex-grow: 2; /* Faz o botão de igual crescer para ocupar o espaço de dois botões */
+}
+
+/* Estilo para a última linha (0 e .) para ficarem lado a lado */
+#calculadora .linha-botoes:last-child {
+    justify-content: flex-start; /* Alinha os botões à esquerda */
+}
+
+#calculadora .linha-botoes:last-child button:first-child {
+    flex-grow: 2; /* Faz o botão '0' ocupar o espaço de dois botões */
+}
+
+#calculadora .linha-botoes:last-child button:last-child {
+    flex-grow: 1; /* Faz o botão '.' ocupar o espaço restante */
+    margin-left: 2px; /* Adiciona uma margem à esquerda para separação */
+}
